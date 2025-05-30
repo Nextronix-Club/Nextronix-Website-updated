@@ -1,0 +1,152 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --background: 0 0% 0%; /* #000000 */
+  --foreground: 0 0% 98%; /* #FAFAFA */
+  --muted: 0 0% 6.7%; /* #111111 */
+  --muted-foreground: 0 0% 53.3%; /* #888888 */
+  --popover: 0 0% 6.7%; /* #111111 */
+  --popover-foreground: 0 0% 98%; /* #FAFAFA */
+  --card: 0 0% 6.7%; /* #111111 */
+  --card-foreground: 0 0% 98%; /* #FAFAFA */
+  --border: 0 0% 53.3%; /* #888888 */
+  --input: 0 0% 6.7%; /* #111111 */
+  --primary: 194 100% 50%; /* #00D9FF */
+  --primary-foreground: 0 0% 0%; /* #000000 */
+  --secondary: 0 0% 6.7%; /* #111111 */
+  --secondary-foreground: 0 0% 98%; /* #FAFAFA */
+  --accent: 0 0% 6.7%; /* #111111 */
+  --accent-foreground: 0 0% 98%; /* #FAFAFA */
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 60 9.1% 97.8%;
+  --ring: 194 100% 50%; /* #00D9FF */
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: 0 0% 0%; /* #000000 */
+  --foreground: 0 0% 98%; /* #FAFAFA */
+  --muted: 0 0% 6.7%; /* #111111 */
+  --muted-foreground: 0 0% 53.3%; /* #888888 */
+  --popover: 0 0% 6.7%; /* #111111 */
+  --popover-foreground: 0 0% 98%; /* #FAFAFA */
+  --card: 0 0% 6.7%; /* #111111 */
+  --card-foreground: 0 0% 98%; /* #FAFAFA */
+  --border: 0 0% 53.3%; /* #888888 */
+  --input: 0 0% 6.7%; /* #111111 */
+  --primary: 194 100% 50%; /* #00D9FF */
+  --primary-foreground: 0 0% 0%; /* #000000 */
+  --secondary: 0 0% 6.7%; /* #111111 */
+  --secondary-foreground: 0 0% 98%; /* #FAFAFA */
+  --accent: 0 0% 6.7%; /* #111111 */
+  --accent-foreground: 0 0% 98%; /* #FAFAFA */
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 60 9.1% 97.8%;
+  --ring: 194 100% 50%; /* #00D9FF */
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .font-orbitron {
+    font-family: 'Orbitron', monospace;
+  }
+
+  .text-neon-blue {
+    color: hsl(194 100% 50%);
+  }
+
+  .bg-neon-blue {
+    background-color: hsl(194 100% 50%);
+  }
+
+  .border-neon-blue {
+    border-color: hsl(194 100% 50%);
+  }
+
+  .text-dark-grey {
+    color: hsl(0 0% 6.7%);
+  }
+
+  .bg-dark-grey {
+    background-color: hsl(0 0% 6.7%);
+  }
+
+  .text-light-grey {
+    color: hsl(0 0% 53.3%);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+
+  .hover-scale {
+    transition: transform 0.3s ease;
+  }
+
+  .hover-scale:hover {
+    transform: scale(1.05);
+  }
+
+  .hover-shadow {
+    transition: box-shadow 0.3s ease;
+  }
+
+  .hover-shadow:hover {
+    box-shadow: 0 20px 40px rgba(0, 217, 255, 0.2);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 20px hsl(194 100% 50%);
+  }
+  100% {
+    box-shadow: 0 0 40px hsl(194 100% 50%);
+  }
+}
+
+.typing-cursor::after {
+  content: '|';
+  animation: blink 1s infinite;
+  color: white;
+}
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}
