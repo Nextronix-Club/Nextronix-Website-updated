@@ -1,26 +1,54 @@
+import hfr from "@assets/Projects/Human-following-robot.jpg";
+import ieri from "@assets/Projects/IEri-Robot.jpg";
+import gcra from "@assets/Projects/Gesture-controlled-Robot-arm.jpg";
+import lfc from "@assets/Projects/line-following-car.jpg";
+import snr from "@assets/Projects/Sonar-sensor.jpg";
+
+
 export const projectData = [
   {
     id: "project-1",
-    title: "Bipedal Walking Robot",
-    description: "Developed a self-balancing bipedal robot with advanced control algorithms and real-time stability adjustments.",
-    image: "https://images.unsplash.com/photo-1561557944-6e7860d1a7eb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250",
-    technologies: ["ROS2", "Python", "C++", "OpenCV"],
+    title: "Human Following Car",
+    description: "Developed a self-driving robot with advanced control algorithms and real-time adjustments.",
+    image: hfr,
+    technologies: ["Arduino", "Python"],
     github: "https://github.com",
+    doc:"",
   },
   {
     id: "project-2",
-    title: "Precision Assembly Arm",
+    title: "Precision Gesture Arm",
     description: "Industrial-grade robotic arm with computer vision integration for automated assembly and quality control.",
-    image: "https://images.unsplash.com/photo-1518186233392-c232efbf2373?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250",
-    technologies: ["ROS", "TensorFlow", "Python", "Arduino"],
+    image: gcra,
+    technologies: ["OpenCV", "Python", "Arduino"],
     github: "https://github.com",
+    doc:"",
   },
   {
     id: "project-3",
-    title: "Smart Surveillance Drone",
-    description: "AI-powered drone with autonomous flight capabilities, object recognition, and real-time data transmission.",
-    image: "https://images.unsplash.com/photo-1508614999368-9260051292e5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250",
-    technologies: ["PyTorch", "OpenCV", "Raspberry Pi", "Python"],
+    title: "iERi",
+    description: "AI-powered human friendly robot with autonomous capabilities, object recognition, and real-time data transmission.",
+    image: ieri,
+    technologies: ["TensorFlow", "Arduino", "Python"],
     github: "https://github.com",
+    doc:"",
+  },
+  {
+    id: "project-4",
+    title: "Line Following Car",
+    description: "Self-driven car with autonomous capabilities, object recognition, and Obstacle avoidance.",
+    image: lfc,
+    technologies: ["Esp32","ROS", "Python"],
+    github: "https://github.com",
+    doc:"",
+  },
+  {
+    id: "project-5",
+    title: "Sonar Sensor",
+    description: "A high quality sonar sensor made using ultraSonic sensor for object recognition and Obstacle avoidance.",
+    image: snr,
+    technologies: ["Arduino","ROS", "Python"],
+    github: "https://github.com",
+    doc:"",
   },
 ];

@@ -1,123 +1,116 @@
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { Link, useLocation } from "wouter";
+import { motion, AnimatePresence } from "framer-motion";
 
-export default function Navigation() {
+const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [location] = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      setScrolled(window.scrollY > 50);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-      setIsMenuOpen(false);
-    }
-  };
-
   const navItems = [
-    { label: "Home", id: "home" },
-    { label: "Team", id: "team" },
-    { label: "Achievements", id: "achievements" },
-    { label: "Timeline", id: "timeline" },
-    { label: "Resources", id: "resources" },
-    { label: "Contact", id: "contact" },
+    { name: "Home", path: "/" },
+    { name: "Team", path: "/team" },
+    { name: "Projects", path: "/achievements" },
+    { name: "Events", path:"/events"},
+    { name: "Timeline", path: "/timeline" },
+    { name: "Resources", path: "/resources" },
+    { name: "Contact", path: "/contact" }
   ];
 
   return (
-    <motion.nav
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      className={`fixed top-0 w-full z-50 border-b border-muted transition-all duration-300 backdrop-blur-md ${
-        isScrolled ? "bg-black" : "bg-black/90"
+    <nav
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+        scrolled
+          ? "bg-black/90 backdrop-blur-md border-b border-neon-blue/30"
+          : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className="font-orbitron text-xl font-bold text-neon-blue cursor-pointer"
-            onClick={() => scrollToSection("home")}
-          >
-            NEXTRONIX
-          </motion.div>
+        <div className="flex items-center justify-between h-16">
+          <Link href="/">
+            <motion.div
+              className="font-orbitron font-bold text-2xl text-white cursor-pointer"
+              whileHover={{ scale: 1.05 }}
+            >
+              NEXTRONIX
+            </motion.div>
+          </Link>
 
-          {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-8">
-            {navItems.map((item, index) => (
-              <motion.button
-                key={item.id}
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                onClick={() => scrollToSection(item.id)}
-                className="text-white hover:text-neon-blue transition-colors duration-300"
-              >
-                {item.label}
-              </motion.button>
-            ))}
+          {/* Desktop Navigation */}
+          <div className="hidden md:block">
+            <div className="ml-10 flex items-baseline space-x-8">
+              {navItems.map((item) => (
+                <Link key={item.name} href={item.path}>
+                  <motion.div
+                    className={`nav-link px-3 py-2 text-sm font-medium transition-colors duration-300 cursor-pointer ${
+                      location === item.path
+                        ? "text-neon-blue"
+                        : "text-gray-300 hover:text-white"
+                    }`}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    {item.name}
+                  </motion.div>
+                </Link>
+              ))}
+            </div>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden text-white hover:text-neon-blue transition-colors duration-300"
-          >
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
+          {/* Mobile menu button */}
+          <div className="md:hidden">
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="text-gray-300 hover:text-white focus:outline-none"
             >
-              {isMenuOpen ? (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              ) : (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              )}
-            </svg>
-          </button>
+              <i
+                className={`fas ${
+                  isMenuOpen ? "fa-times" : "fa-bars"
+                } text-xl`}
+              ></i>
+            </button>
+          </div>
         </div>
       </div>
 
-      {/* Mobile Menu */}
-      <motion.div
-        initial={{ opacity: 0, height: 0 }}
-        animate={{
-          opacity: isMenuOpen ? 1 : 0,
-          height: isMenuOpen ? "auto" : 0,
-        }}
-        className="md:hidden bg-dark-grey border-t border-light-grey overflow-hidden"
-      >
-        <div className="px-4 py-2 space-y-1">
-          {navItems.map((item) => (
-            <button
-              key={item.id}
-              onClick={() => scrollToSection(item.id)}
-              className="block w-full text-left px-3 py-2 text-white hover:text-neon-blue transition-colors duration-300"
-            >
-              {item.label}
-            </button>
-          ))}
-        </div>
-      </motion.div>
-    </motion.nav>
+      {/* Mobile Navigation */}
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            className="md:hidden bg-black/95 backdrop-blur-md border-b border-neon-blue/30"
+          >
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+              {navItems.map((item) => (
+                <Link key={item.name} href={item.path}>
+                  <div
+                    onClick={() => setIsMenuOpen(false)}
+                    className={`block px-3 py-2 text-base font-medium transition-colors duration-300 cursor-pointer ${
+                      location === item.path
+                        ? "text-neon-blue"
+                        : "text-gray-300 hover:text-white"
+                    }`}
+                  >
+                    {item.name}
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </nav>
   );
-}
+};
+
+export default Navigation;

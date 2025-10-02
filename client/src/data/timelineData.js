@@ -1,26 +1,21 @@
 export const timelineData = [
   {
     id: "timeline-1",
-    year: "2020",
+    year: "2024",
     title: "Club Foundation",
-    description: "NEXTRONIX was founded by a group of passionate engineering students with a vision to revolutionize robotics education and innovation.",
+    description: "NEXTRONIX was founded by a group of passionate engineering students of Chhattisgarh Swami Vivekanand Technical University (CSVTU) at 21-12-2024 with a vision to revolutionize robotics education and innovation. ",
   },
   {
     id: "timeline-2",
-    year: "2021",
-    title: "First Competition",
-    description: "Won first place at the Regional Robotics Championship with our autonomous navigation robot, establishing our reputation in the robotics community.",
+    year: "2025",
+    title: "Won 1st Prize in Science Exhibition held at CSVTU",
+    description: "We won our fist ever competition as a team in the Science exhibition held in our college , CSVTU. We were awarded by the esteemed chief guests.",
   },
   {
     id: "timeline-3",
-    year: "2022",
-    title: "Lab Expansion",
-    description: "Established a state-of-the-art robotics laboratory with advanced equipment and expanded our team to include specialists in AI and machine learning.",
+    year: "2025",
+    title: "Club Expansion and Collaborations",
+    description: "We have collaborated with Robotechs also a robotic club of fascinating individuals from BIT, Durg. Helping each other in the field of robotics and making new innovations.",
   },
-  {
-    id: "timeline-4",
-    year: "2023",
-    title: "International Recognition",
-    description: "Achieved international recognition at the Global Robotics Summit and launched our open-source robotics platform used by universities worldwide.",
-  },
+  
 ];
