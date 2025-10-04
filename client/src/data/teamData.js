@@ -3,17 +3,19 @@ import mentor2 from "@assets/mentor2.jpg";
 import leader1 from "@assets/leader-1.jpg";
 import leader2 from "@assets/leader-2.jpg";
 import pr1 from "@assets/pr-1.jpg"
-import pr2 from "@assets/pr-2.jpg"
 import pr3 from "@assets/pr-3.jpg"
-import pr4 from "@assets/pr-4.jpg"
 import pr5 from "@assets/pr-5.jpg"
-import pr6 from "@assets/pr-6.jpg"
+import pr8 from "@assets/pr-8.jpg"
+import pr9 from "@assets/pr-9.jpg"
+import pr10 from "@assets/pr-10.jpg"
 import tech1 from "@assets/tech-1.jpeg"
 import tech2 from "@assets/tech-2.png"
 import tech3 from "@assets/tech-3.jpg"
 import tech4 from "@assets/tech-4.jpg"
 import tech5 from "@assets/tech-5.jpg"
 import tech6 from "@assets/tech-6.jpg"
+import tech7 from "@assets/tech-7.jpg";
+
 
 
 export const teamData = {
@@ -69,16 +71,7 @@ export const teamData = {
   ],
   outreach:[
     {
-      id: "pr-2",
-      name: "Samiksha Ajane",
-      position: "P.R Team member",
-      email: "smajane08@gmail.com",
-      image: pr2,
-      linkedin: "https://www.linkedin.com/in/samiksha-ajane-20b3a2314",
-      github: "https://github.com/Samiksha1905",
-    },
-    {
-      id: "pr-3",
+      id: "pr-1",
       name: "Shreyansh Goswami",
       position: "P.R Team member",
       email: "goswami121shreyansh@gmail.com",
@@ -87,16 +80,7 @@ export const teamData = {
       github: "https://github.com/Shreyansh4Ai",
     },
     {
-      id: "pr-4",
-      name: "Dikesh Patel",
-      position: "P.R Team member",
-      email: "thedikesh@gmail.com",
-      image: pr4,
-      linkedin: "https://www.linkedin.com/in/dksg07",
-      github: "https://github.com/dksg07",
-    },
-    {
-      id: "pr-5",
+      id: "pr-2",
       name: "Shivam Tandon",
       position: "P.R Team member",
       email: "shivamtandonn@gmail.com",
@@ -105,14 +89,33 @@ export const teamData = {
       github: "https://github.com/tShivam25",
     },
     {
-      id: "pr-6",
-      name: "Jay Parmar",
+      id: "pr-4",
+      name: "Srijan Dubey",
       position: "P.R Team member",
-      email: "jaydeepak2532006@gmail.com",
-      image: pr6,
-      linkedin: "https://www.linkedin.com/in/jay-parmar-bb866632a/",
-      github: "https://github.com/jay2532006",
+      email: "srijandubey639@gmail.com",
+      image: pr8,
+      linkedin: "https://www.linkedin.com/in/srijandubey639",
+      github: "https://github.com/",
     },
+    {
+      id: "pr-5",
+      name: "Cheeduru Gnani Sundar Raj",
+      position: "P.R Team member",
+      email: "gnanisundarraj.cheeduru@gmail.com",
+      image: pr9,
+      linkedin: "https://www.linkedin.com/in/gnani-sundar-raj-cheeduru-87182b2a8",
+      github: "https://github.com/Gnanisundarraj",
+    },
+    {
+      id: "pr-6",
+      name: "Dikesh Patel",
+      position: "P.R Team member",
+      email: "thedikesh@gmail.com",
+      image: pr10,
+      linkedin: "https://www.linkedin.com/in/dksg07",
+      github: "https://github.com/dksg07",
+    },
+    
   ],
   technical: [
     {
@@ -123,6 +126,15 @@ export const teamData = {
       image: tech1,
       linkedin: "https://www.linkedin.com/in/sintu-hazarika-844064327",
       github: "https://github.com/",
+    },
+    {
+      id: "tech-6",
+      name: "Aman Sonwani",
+      position: "Technical Team Member",
+      email: "exehyper999@gmail.com",
+      image: tech6,
+      linkedin: "https://www.linkedin.com/in/aman-sonwani-a95b0a326",
+      github: "https://github.com/CyberMatic-AmAn",
     },
     {
       id: "tech-2",
@@ -161,13 +173,13 @@ export const teamData = {
       github: "https://github.com/",
     },
     {
-      id: "tech-6",
-      name: "Aman Sonwani",
+      id: "tech-7",
+      name: "Gyan Prakash Patel",
       position: "Technical Team Member",
-      email: "exehyper999@gmail.com",
-      image: tech6,
-      linkedin: "https://www.linkedin.com/",
-      github: "https://github.com/",
+      email: "gyan100485@gmail.com",
+      image: tech7,
+      linkedin: "https://linkedin.com/in/gyan-prakash-patel-a81b07326",
+      github: "https://github.com/Marcus749",
     },
   ],
 };

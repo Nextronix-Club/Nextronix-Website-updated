@@ -11,11 +11,11 @@ export const timelineData = [
     title: "Won 1st Prize in Science Exhibition held at CSVTU",
     description: "We won our fist ever competition as a team in the Science exhibition held in our college , CSVTU. We were awarded by the esteemed chief guests.",
   },
-  {
-    id: "timeline-3",
-    year: "2025",
-    title: "Club Expansion and Collaborations",
-    description: "We have collaborated with Robotechs also a robotic club of fascinating individuals from BIT, Durg. Helping each other in the field of robotics and making new innovations.",
-  },
+  // {
+  //   id: "timeline-3",
+  //   year: "2025",
+  //   title: "Club Expansion and Collaborations",
+  //   description: "We have collaborated with Robotechs also a robotic club of fascinating individuals from BIT, Durg. Helping each other in the field of robotics and making new innovations.",
+  // },
   
 ];

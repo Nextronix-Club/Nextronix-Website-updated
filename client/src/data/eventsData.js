@@ -4,6 +4,8 @@ import e1 from "@assets/Events/Event-1.jpg";
 import e2 from "@assets/Events/Event-2.jpg";
 import e3 from "@assets/Events/Event-3.jpg";
 import e4 from "@assets/Events/Event-4.jpg";
+import e5 from "@assets/Events/Event-5.jpg";
+
 
 export const EventData = [
   {
@@ -45,5 +47,15 @@ export const EventData = [
     image: e4,
     topics: ["Esp32","Arduino", "Python","ArduinoIDE"],
     info: "https://www.instagram.com/p/DJUS1fVTnB_/?img_index=1",
+  },
+  {
+    id: "Event-5",
+    title: "Workshop on RAG Agents with N8N,",
+    speaker:"",
+    date:"18-07-2025",
+    description: "The official workshop on RAG Agents with N8N, hosted by MK Sinha",
+    image: e5,
+    topics: ["RAG","N8N", "Google-Cloud","Workflows"],
+    info: "https://www.youtube.com/watch?v=H-VYiHMEEwg",
   },
 ];

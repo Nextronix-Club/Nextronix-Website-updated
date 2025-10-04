@@ -21,6 +21,8 @@ const Navigation = () => {
     { name: "Projects", path: "/achievements" },
     { name: "Events", path:"/events"},
     { name: "Timeline", path: "/timeline" },
+    { name: "Merchandise", path: "/merchandise" },
+    { name: "Documents", path: "/documents" },
     { name: "Resources", path: "/resources" },
     { name: "Contact", path: "/contact" }
   ];
@@ -46,7 +48,7 @@ const Navigation = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8">
+            <div className="ml-10 flex items-baseline space-x-5">
               {navItems.map((item) => (
                 <Link key={item.name} href={item.path}>
                   <motion.div

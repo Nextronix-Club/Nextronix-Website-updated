@@ -55,6 +55,15 @@ const Resources = () => {
       level: "Intermediate",
       link: "https://www.youtube.com/playlist?list=PLkEZIY-NgCD_tuHk_gR0RWVecNoOZ157G",
       icon: "fas fa-microchip"
+    },
+    {
+      title: "3D Viewer",
+      description:
+        "Learn circuit design and PCB layout for custom robotics electronics using KiCad and Altium Designer.",
+      category: "Hardware",
+      level: "Intermediate",
+      link: "https://cybermatic-aman.github.io/3D-model-data/",
+      icon: "fas fa-arrows"
     }
   ];
 
@@ -175,13 +184,14 @@ const Resources = () => {
           Join our community to access exclusive workshops, mentorship programs,
           and collaborative projects.
         </p>
-        <motion.button
+        <motion.a
+          href="https://whatsapp.com/channel/0029VbBFW3NHbFVCSIoORn1H"
           className="px-8 py-4 bg-neon-blue text-black font-semibold rounded-lg hover:bg-neon-blue/80 transition-colors"
           whileHover={{ scale: 1.05, boxShadow: "0 0 20px #00BFFF" }}
           whileTap={{ scale: 0.95 }}
         >
           Join NEXTRONIX Community
-        </motion.button>
+        </motion.a>
       </motion.section>
     </div>
   );

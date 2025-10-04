@@ -12,6 +12,8 @@ import Resources from "./pages/Resources";
 import Contact from "./pages/Contact";
 import NotFound from "@/pages/not-found";
 import Events from "./pages/Events"
+import Documents from "./pages/Documents";
+import Merchandise from "./pages/Merchandise"
 
 function Router() {
   return (
@@ -23,6 +25,8 @@ function Router() {
         <Route path="/achievements" component={Achievements} />
         <Route path="/events" component={Events}/>
         <Route path="/timeline" component={Timeline} />
+        <Route path="/merchandise" component={Merchandise} />
+        <Route path="/documents" component={Documents} />
         <Route path="/resources" component={Resources} />
         <Route path="/contact" component={Contact} />
         <Route component={NotFound} />

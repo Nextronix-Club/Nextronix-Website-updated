@@ -73,7 +73,7 @@ const Contact = () => {
                 <div>
                   <h3 className="font-semibold text-white">Email</h3>
                   <a
-                    href="mailto:contact@nextronix.club"
+                    href="president_nextronix_ppts@csvtu.ac.in"
                     className="text-gray-300 hover:text-neon-blue transition-colors"
                   >
                     president_nextronix_ppts@csvtu.ac.in
@@ -166,7 +166,7 @@ const Contact = () => {
 
           <div className="space-y-6">
             <motion.a
-              href="mailto:maya.patel@nextronix.com?subject=Interest%20in%20NEXTRONIX&body=Hi%20NEXTRONIX%20team%2C%0A%0AI'm%20interested%20in%20learning%20more%20about%20your%20robotics%20club.%0A%0ABest%20regards"
+              href="mailto:Mksinha77756@gmail.com?subject=Interest%20in%20NEXTRONIX&body=Hi%20NEXTRONIX%20team%2C%0A%0AI'm%20interested%20in%20learning%20more%20about%20your%20robotics%20club.%0A%0ABest%20regards"
               className="w-full bg-neon-blue text-black font-semibold py-3 rounded-lg hover:bg-neon-blue/80 transition-colors flex items-center justify-center"
               whileHover={{ scale: 1.02, boxShadow: "0 0 20px #00BFFF" }}
               whileTap={{ scale: 0.98 }}
@@ -176,17 +176,17 @@ const Contact = () => {
             </motion.a>
 
             <motion.a
-              href="#"
+              href="https://whatsapp.com/channel/0029VbBFW3NHbFVCSIoORn1H"
               className="w-full border-2 border-neon-blue text-neon-blue py-3 rounded-lg hover:bg-neon-blue hover:text-black transition-colors flex items-center justify-center font-semibold"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
-              <i className="fas fa-calendar mr-2"></i>
-              Schedule a Meeting
+              <i className="fab fa-whatsapp mr-2"></i>
+              Join NEXTRONIX Community
             </motion.a>
 
             <motion.a
-              href="#"
+              href="https://www.youtube.com/@NEXTRONIX-s6x"
               className="w-full border-2 border-neon-blue text-neon-blue py-3 rounded-lg hover:bg-neon-blue hover:text-black transition-colors flex items-center justify-center font-semibold"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
